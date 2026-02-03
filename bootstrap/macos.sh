@@ -29,3 +29,11 @@ fi
 
 # 4. Core tools
 brew install git stow
+
+# 5. Show only running apps in Dock (empties pinned apps)
+defaults write com.apple.dock static-only -bool true
+
+# Optional: also hide "recent apps" section
+defaults write com.apple.dock show-recents -bool false
+
+killall Dock
