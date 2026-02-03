@@ -1,0 +1,13 @@
+.DS_Store
+*.swp
+*.bak
+
+# secrets / locals
+*.local
+.env
+.env.*
+
+# historires & caches
+*zsh_history*
+*zcompdump*
+
