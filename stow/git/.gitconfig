@@ -1,0 +1,12 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Frederique Lemieux
+
+[core]
+	editor = vim
+
+[init]
+	defaultBranch = main
+
+[include]
+	path = ~/.gitconfig.local
