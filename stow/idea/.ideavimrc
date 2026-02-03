@@ -1,0 +1,10 @@
+Plug 'tpope/vim-surround'
+set surround
+
+" Set relative numbers
+set relativenumber
+
+" Set the line number again so we can see the current line number
+set number
+
+set so=10
