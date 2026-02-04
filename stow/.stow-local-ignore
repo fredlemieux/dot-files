@@ -1,0 +1,5 @@
+# Ignore example files - users should copy these manually
+\.example$
+
+# Ignore the stow script itself
+^stow\.sh$
