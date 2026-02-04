@@ -15,6 +15,7 @@ scripts=(
   "52-apps-productivity.sh"
   "53-apps-vpn.sh"
   "54-apps-ai.sh"
+  "55-apps-comms.sh"
 )
 
 for script in "${scripts[@]}"; do
