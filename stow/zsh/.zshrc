@@ -54,6 +54,7 @@ alias gl='git pull'
 alias gp='git push'
 alias gpf='git push --force-with-lease'
 alias gst='git status'
+alias grhh='git reset --hard'
 alias glog='git log --oneline --graph --decorate -10'
 
 # CLI Aliases for ease
