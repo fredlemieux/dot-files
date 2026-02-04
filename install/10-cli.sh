@@ -10,6 +10,7 @@ brew install \
   fd \
   bat \
   direnv \
-  kubernetes-cli
+  kubernetes-cli \
+  starship
 
 echo "CLI tools installed"
