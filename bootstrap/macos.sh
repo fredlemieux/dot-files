@@ -12,12 +12,12 @@ fi
 # 2. Homebrew
 if ! command -v brew &>/dev/null; then
   echo "Installing Homebrew..."
-  /bin/bash -c "$(curl fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-# 3. Ensure vrew in PATH (Apple SIlicon)
-if [[ "$uname -m)" == "arm64" ]]; then
-  eval "$(/opt/homebrew/bin/vrew shellenv)"
+# 3. Ensure brew in PATH (Apple Silicon)
+if [[ "$(uname -m)" == "arm64" ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Ensure brew is available in THIS script run (Apple Silicon)

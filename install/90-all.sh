@@ -32,3 +32,6 @@ for script in "${scripts[@]}"; do
 done
 
 echo "All installers finished."
+echo
+echo "==> Symlinking dotfiles with stow"
+"$ROOT_DIR/stow/stow.sh"
