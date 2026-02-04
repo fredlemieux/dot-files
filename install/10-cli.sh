@@ -10,6 +10,7 @@ brew install \
   fd \
   bat \
   direnv \
+  zsh-autosuggestions \
   kubernetes-cli \
   starship
 

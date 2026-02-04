@@ -18,6 +18,13 @@ setopt INC_APPEND_HISTORY
 autoload -Uz compinit
 compinit
 
+##### Autosuggestions (history ghost text) #####
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+ZSH_AUTOSUGGEST_STRATEGY=(history)
+# Accept full autosuggestion with Ctrl-Space
+bindkey '^ ' autosuggest-accept
+
 # --- SSH agent (macOS-friendly) ---
 # Use macOS keychain + ssh-agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
