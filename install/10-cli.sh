@@ -11,7 +11,6 @@ brew install \
   bat \
   direnv \
   zsh-autosuggestions \
-  man \
   kubernetes-cli \
   starship
 
