@@ -4,6 +4,8 @@ export VISUAL=vim
 
 ##### Vim keybindings for shell editing #####
 bindkey -v
+##### Reduce vim-mode ESC delay #####
+KEYTIMEOUT=1
 
 # --- History ---
 HISTSIZE=10000
@@ -17,6 +19,11 @@ setopt INC_APPEND_HISTORY
 # --- Completion ---
 autoload -Uz compinit
 compinit
+## Interactive menu
+zstyle ':completion:*' menu select
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} # keeps directory colours, not sure if this works/is necessary
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # case insensitive
+
 
 ##### Autosuggestions (history ghost text) #####
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -43,6 +50,29 @@ if [[ -d "/Applications/WebStorm.app/Contents/MacOS" ]]; then
   export PATH="/Applications/WebStorm.app/Contents/MacOS:$PATH"
 fi
 
+# Terminal navigation
+# Ensure option-backspace deletes word
+# Option/Alt (Meta) word-wise editing in *insert* mode (viins)
+# Terminal should be configured with “Use Option as Meta key”.
+bindkey -M viins '^[^?' backward-kill-word   # ⌥ + Backspace
+bindkey -M viins '^[d'  kill-word            # ⌥ + d (delete forward word)
+bindkey -M viins '^[b'  backward-word        # ⌥ + b (back a word)
+bindkey -M viins '^[f'  forward-word         # ⌥ + f (forward a word)
+
+# Make Backspace/Delete consistently delete a single character in vi insert mode.
+# (Different terminals send either ^? or ^H for Backspace.)
+bindkey -M viins '^?' backward-delete-char
+bindkey -M viins '^H' backward-delete-char
+
+# Forward-delete (Fn+Delete on macOS often sends ^[[3~)
+bindkey -M viins '^[[3~' delete-char
+
+# Some terminals send these for Option+Arrow; bind them too (macOS/Terminal/iTerm common)
+bindkey -M viins '^[\e[1;3D' backward-word   # ⌥ + ←
+bindkey -M viins '^[\e[1;3C' forward-word    # ⌥ + →
+bindkey -M viins '^[\e[3;3~' kill-word       # ⌥ + Fn + Delete (common)
+
+
 ## ALIASES!
 # Git aliases (OMZ-style greatest hits)
 alias g='git'
@@ -64,9 +94,13 @@ alias gst='git status'
 alias grhh='git reset --hard'
 alias glog='git log --oneline --graph --decorate -10'
 
-# CLI Aliases for ease
+# CLI
 alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 
+# Kubernetes
+alias kc='kubectl'
 
 ##### Prompt (Starship) #####
 eval "$(starship init zsh)"

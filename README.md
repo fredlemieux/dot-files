@@ -14,12 +14,15 @@ install/        # Modular installation scripts
   52-apps-productivity.sh # Productivity apps
   53-apps-vpn.sh      # VPN clients
   54-apps-ai.sh       # AI tools
+  55-apps-comms.sh    # Communication apps (WhatsApp, Slack, Teams)
   90-all.sh           # Run all installers in order
 stow/           # Configuration files for symlinking
+  .stow-local-ignore  # Files to exclude from symlinking
   stow.sh             # Symlink script
   git/                # Git config
   idea/               # IdeaVim config
   ssh/                # SSH config
+  starship/           # Starship prompt config
   tmux/               # Tmux config
   zsh/                # Zsh config
 ```
