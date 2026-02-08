@@ -12,6 +12,8 @@ brew install \
   direnv \
   zsh-autosuggestions \
   kubernetes-cli \
+  awscli \
+  terraform \
   starship
 
 echo "CLI tools installed"

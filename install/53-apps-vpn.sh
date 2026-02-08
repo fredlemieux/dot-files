@@ -4,6 +4,7 @@ set -euo pipefail
 echo "Installing VPN..."
 
 brew install --cask \
-  protonvpn
+  protonvpn \
+
 
 echo "VPN installed."

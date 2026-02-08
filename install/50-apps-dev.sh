@@ -5,6 +5,8 @@ echo "Installing development applications..."
 
 brew install --cask \
   webstorm \
-  docker-desktop
+  docker-desktop \
+  postman
+
 
 echo "Development applications installed."

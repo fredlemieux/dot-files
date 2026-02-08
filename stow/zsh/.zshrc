@@ -43,6 +43,11 @@ if command -v fnm >/dev/null 2>&1; then
   eval "$(fnm env --use-on-cd)"
 fi
 
+# --- pyenv setup ---
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
 # --- IDE CLIs ---
 
 # WebStorm CLI
@@ -104,3 +109,6 @@ alias kc='kubectl'
 
 ##### Prompt (Starship) #####
 eval "$(starship init zsh)"
+
+# --- Local overrides (not committed) ---
+[[ -f ~/.zsh.local ]] && source ~/.zsh.local
