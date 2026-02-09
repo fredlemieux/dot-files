@@ -114,5 +114,9 @@ alias kc='kubectl'
 ##### Prompt (Starship) #####
 eval "$(starship init zsh)"
 
+#### zoxide is a smarter cd command, inspired by z and autojump. ####
+# https://github.com/ajeetdsouza/zoxide
+eval "$(zoxide init zsh)"
+
 # --- Local overrides (not committed) ---
 [[ -f ~/.zsh.local ]] && source ~/.zsh.local
