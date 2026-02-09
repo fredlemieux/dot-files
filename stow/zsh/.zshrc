@@ -39,6 +39,7 @@ if ! pgrep -u "$USER" ssh-agent > /dev/null; then
 fi
 
 # --- fnm (Node.js version manager) ---
+export FNM_COREPACK_ENABLED=true
 if command -v fnm >/dev/null 2>&1; then
   eval "$(fnm env --use-on-cd)"
 fi
@@ -96,8 +97,12 @@ alias gl='git pull'
 alias gp='git push'
 alias gpf='git push --force-with-lease'
 alias gst='git status'
+alias gr='git rebase'
 alias grhh='git reset --hard'
 alias glog='git log --oneline --graph --decorate -10'
+
+# Package aliases
+alias pn=pnpm
 
 # CLI
 alias ..='cd ..'
