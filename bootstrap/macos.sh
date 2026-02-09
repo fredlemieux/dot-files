@@ -34,6 +34,10 @@ brew install git stow
 defaults write com.apple.dock static-only -bool true
 
 # Optional: also hide "recent apps" section
-defaults write com.apple.dock show-recents -bool false
+defaults write com.apple.
+dock show-recents -bool false
+
+# 6. Auto-hide the dock
+defaults write com.apple.dock autohide -bool true && killall Dock
 
 killall Dock
