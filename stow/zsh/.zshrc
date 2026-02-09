@@ -120,3 +120,6 @@ eval "$(zoxide init zsh)"
 
 # --- Local overrides (not committed) ---
 [[ -f ~/.zsh.local ]] && source ~/.zsh.local
+
+# Created by `pipx` on 2026-02-09 20:58:19
+export PATH="$PATH:/Users/freddylem/.local/bin"
