@@ -24,6 +24,8 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} # keeps directory colours, not sure if this works/is necessary
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # case insensitive
 
+# Move to directories without cd
+setopt autocd
 
 ##### Autosuggestions (history ghost text) #####
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
