@@ -11,9 +11,12 @@ brew install \
   bat \
   direnv \
   zsh-autosuggestions \
+  zoxide \
   kubernetes-cli \
   awscli \
   terraform \
   starship
 
 echo "CLI tools installed"
+
+# https://github.com/ajeetdsouza/zoxide
