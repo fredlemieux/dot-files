@@ -6,7 +6,8 @@ echo "Installing development applications..."
 brew install --cask \
   webstorm \
   docker-desktop \
-  postman
+  postman \
+  dbeaver-community
 
 
 echo "Development applications installed."
