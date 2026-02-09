@@ -108,11 +108,6 @@ alias glog='git log --oneline --graph --decorate -10'
 # Package aliases
 alias pn=pnpm
 
-# CLI
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-
 # Kubernetes
 alias kc='kubectl'
 
