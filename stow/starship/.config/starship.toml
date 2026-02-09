@@ -36,6 +36,9 @@ truncate_to_repo = true
 [git_branch]
 symbol = " "
 style = "bold purple"
+truncation_length = 40
+truncation_symbol = "…"
+format = "[$symbol$branch(:$remote_branch)]($style) "
 
 [git_status]
 style = "bold yellow"
