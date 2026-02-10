@@ -7,6 +7,7 @@ brew install --cask \
   alfred \
   rectangle \
   obsidian \
-  google-drive
+  google-drive \
+  displaylink
 
 echo "Productivity applications installed."
