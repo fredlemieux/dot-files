@@ -41,3 +41,10 @@ dock show-recents -bool false
 defaults write com.apple.dock autohide -bool true && killall Dock
 
 killall Dock
+
+# TODO!
+# This clashes with webstorm shortcuts
+#Disable/change the key binding for the Search man Page Index in Terminal feature:
+#Open Apple menu | System Preferences | Keyboard | Shortcuts | Services
+#Disable Search man Page Index in Terminal (or change the shortcut)
+#Use Search Everywhere (Shift+Shift) shortcut instead of Find Action (Cmd+Shift+A).
