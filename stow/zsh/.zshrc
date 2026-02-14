@@ -43,7 +43,7 @@ fi
 # --- fnm (Node.js version manager) ---
 export FNM_COREPACK_ENABLED=true
 if command -v fnm >/dev/null 2>&1; then
-  eval "$(fnm env --use-on-cd)"
+  eval "$(fnm env --use-on-cd --version-file-strategy recursive)"
 fi
 
 # --- pyenv setup ---
@@ -112,6 +112,10 @@ alias pn=pnpm
 # Kubernetes
 alias kc='kubectl'
 
+# Webstorm
+alias ws='webstorm'
+alias wsf='webstorm --line 1' # this will reveal the file or folder in the project view
+
 ##### Prompt (Starship) #####
 eval "$(starship init zsh)"
 
@@ -124,3 +128,7 @@ eval "$(zoxide init zsh)"
 
 # Created by `pipx` on 2026-02-09 20:58:19
 export PATH="$PATH:/Users/freddylem/.local/bin"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/freddylem/.lmstudio/bin"
+# End of LM Studio CLI section

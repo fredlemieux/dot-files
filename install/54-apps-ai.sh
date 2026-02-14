@@ -9,4 +9,8 @@ brew install --cask \
   claude-code \
   chatgpt
 
+# ollama has compatibility issues with Using GPU / Metal
+# https://lmstudio.ai/
+brew install ollama
+
 echo "AI applications installed."
