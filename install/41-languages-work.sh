@@ -38,13 +38,6 @@ fi
 # Data grip
 brew install --cask datagrip
 
-# Enable corepack and install pnpm
-corepack enable
-corepack prepare pnpm@latest --activate
-# pnpm completion zsh # TODO! revisit how we can have pnpm autocompletion
-npx zsh-pnpm-completions
-
-
 # Install Hasura CLI if not already installed
 if ! command -v hasura &> /dev/null; then
   echo "Installing Hasura CLI..."

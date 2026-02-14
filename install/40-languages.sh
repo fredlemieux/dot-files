@@ -7,6 +7,7 @@ echo "Installing language managers..."
 brew install fnm
 # Initialize fnm for this script
 eval "$(fnm env --use-on-cd)"
+
 # Install latest LTS Node if no versions installed yet
 if [ -z "$(fnm ls)" ]; then
   echo "No Node versions found, installing latest LTS..."
