@@ -5,6 +5,7 @@ echo "Installing CLI tools..."
 
 brew install \
   tmux \
+  tmuxp \
   fzf \
   ripgrep \
   fd \
