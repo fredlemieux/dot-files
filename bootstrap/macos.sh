@@ -48,3 +48,7 @@ killall Dock
 #Open Apple menu | System Preferences | Keyboard | Shortcuts | Services
 #Disable Search man Page Index in Terminal (or change the shortcut)
 #Use Search Everywhere (Shift+Shift) shortcut instead of Find Action (Cmd+Shift+A).
+
+#I don't think this works, but also
+#If you are using a Magic Mouse or trackpad and it keeps going back accidentally: Go to System Settings > Trackpad/Mouse > More Gestures. Change Swipe between pages to Off or set it to "Swipe with three fingers".
+#defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool FALSE
