@@ -8,13 +8,17 @@ Personal macOS dotfiles managed with [GNU Stow](https://www.gnu.org/software/sto
 bootstrap/      # Initial system setup (Xcode, Homebrew, etc.)
 install/        # Modular installation scripts
   10-cli.sh           # CLI tools (tmux, fzf, ripgrep, etc.)
-  40-languages.sh     # Language managers (fnm)
-  50-apps-dev.sh      # Development apps (WebStorm, Docker)
-  51-apps-browsers.sh # Web browsers
+  40-languages.sh     # Language managers (fnm, pyenv, php)
+  41-languages-work.sh # Work specific languages (Python 3.9/3.11/3.12, Hasura, Poetry)
+  42-languages-node.sh # Node/Bun tools (pnpm, bun)
+  50-apps-dev.sh      # Development apps (WebStorm, Docker, Postman)
+  51-apps-browsers.sh # Web browsers (Chrome, Firefox)
   52-apps-productivity.sh # Productivity apps
   53-apps-vpn.sh      # VPN clients
-  54-apps-ai.sh       # AI tools
+  54-apps-ai.sh       # AI tools (Claude Code, ChatGPT, Ollama, PAI)
   55-apps-comms.sh    # Communication apps (WhatsApp, Slack, Teams)
+  56-apps-password-managers.sh # Password managers (Keeper)
+  60-experiments.sh   # Experimental apps and tools
   90-all.sh           # Run all installers in order
 stow/           # Configuration files for symlinking
   .stow-local-ignore  # Files to exclude from symlinking
