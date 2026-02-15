@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 # These are experiments, apps, that I'm not sure I want to keep.
 # When they become stable, they should be moved to the correct install files.

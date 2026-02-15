@@ -10,12 +10,16 @@ INSTALL_DIR="$ROOT_DIR/install"
 scripts=(
   "10-cli.sh"
   "40-languages.sh"
+  "41-languages-work.sh"
+  "42-languages-node.sh"
   "50-apps-dev.sh"
   "51-apps-browsers.sh"
   "52-apps-productivity.sh"
   "53-apps-vpn.sh"
   "54-apps-ai.sh"
   "55-apps-comms.sh"
+  "56-apps-password-managers.sh"
+  "60-experiments.sh"
 )
 
 for script in "${scripts[@]}"; do
