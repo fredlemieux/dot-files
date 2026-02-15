@@ -13,4 +13,7 @@ brew install --cask \
 # https://lmstudio.ai/
 brew install ollama
 
+# Not strictly AI but adding it here because that's what claude keeps using for commands <- Possibly remove
+brew install gh
+
 echo "AI applications installed."

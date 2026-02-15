@@ -132,3 +132,6 @@ export PATH="$PATH:/Users/freddylem/.local/bin"
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/freddylem/.lmstudio/bin"
 # End of LM Studio CLI section
+
+# PAI alias
+alias pai='bun ~/.claude/skills/PAI/Tools/pai.ts'

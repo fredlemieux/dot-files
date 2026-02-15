@@ -8,6 +8,7 @@ brew install --cask \
   rectangle \
   obsidian \
   google-drive \
-  displaylink
+  displaylink \
+  workflowy
 
 echo "Productivity applications installed."
