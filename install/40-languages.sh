@@ -8,7 +8,7 @@ brew install fnm
 # Initialize fnm for this script
 eval "$(fnm env --use-on-cd)"
 
-# Install latest LTS Node if no versions installed yet
+# Install the latest LTS Node
 if [ -z "$(fnm ls)" ]; then
   echo "No Node versions found, installing latest LTS..."
   fnm install --lts
@@ -29,4 +29,4 @@ brew install openssl readline sqlite3 xz tcl-tk@8 libb2 zstd zlib pkgconfig
 # Just install the latest python 3 version and use as default
 pyenv install --skip-existing 3
 
-echo "fnm installed. Note: No node versions are installed here."
+echo "fnm and language managers installed."
