@@ -41,4 +41,13 @@ fi
 # Not strictly AI but adding it here because that's what claude keeps using for commands <- Possibly remove
 brew install gh
 
+# ─── MCP Servers (Claude Code integrations) ────────────────────────
+# These run via npx on-demand — no global install needed.
+# Configured in ~/.claude/settings.json under "mcpServers".
+# API keys stored in ~/.claude/.env (gitignored).
+#
+# @orengrinker/jira-mcp-server  — Jira Cloud integration (search, create, update tickets)
+#   Requires: JIRA_BASE_URL, JIRA_EMAIL, JIRA_API_TOKEN in .env
+#   Docs: https://github.com/OrenGrinker/jira-mcp-server
+
 echo "AI applications installed."

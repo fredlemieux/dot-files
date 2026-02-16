@@ -24,6 +24,16 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} # keeps directory colours, not sure if this works/is necessary
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # case insensitive
 
+# Custom git branch completion with MRU (Most Recently Used) sorting
+_git_checkout_mru() {
+  local branches
+  branches=(${(f)"$(git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/ 2>/dev/null)"})
+  _describe -V 'branch' branches
+}
+
+# Use MRU completion for gco alias
+compdef _git_checkout_mru gco
+
 # Move to directories without cd
 setopt autocd
 
@@ -127,10 +137,10 @@ eval "$(zoxide init zsh)"
 [[ -f ~/.zsh.local ]] && source ~/.zsh.local
 
 # Created by `pipx` on 2026-02-09 20:58:19
-export PATH="$PATH:/Users/freddylem/.local/bin"
+export PATH="$PATH:~/.local/bin"
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/freddylem/.lmstudio/bin"
+export PATH="$PATH:~/.lmstudio/bin"
 # End of LM Studio CLI section
 
 # PAI alias
